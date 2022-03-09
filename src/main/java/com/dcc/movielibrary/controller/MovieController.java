@@ -43,4 +43,16 @@ public class MovieController {
 		return movieService.deleteMovie(id);
 	};
 	
+	@GetMapping("/searchByName")
+	public List<Movie> searchMoviesByName(@RequestBody String name) {
+		//name must be passed in as raw text data no quotation marks
+		return movieService.findAllByName(name);
+	};
+	
+	@GetMapping("/searchByGenre")
+	public List<Movie> searchMoviesByGenre(@RequestBody String genre) {
+		//genre must be passed in as raw text data no quotation marks
+		return movieService.findAllByGenre(genre);
+	};
+	
 }

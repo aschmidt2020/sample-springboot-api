@@ -47,6 +47,15 @@ public class MovieService {
 		}
 	};
 	
+	public List<Movie> findAllByName (String name) {
+		return movieRepository.findAllByName(name);
+	};
+	
+	public List<Movie> findAllByGenre (String genre) {
+		return movieRepository.findAllByGenre(genre);
+	};
+	
+	
 	
 	
 }
